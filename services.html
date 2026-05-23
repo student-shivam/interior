@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore premium interior services by Krishna Interior House Lucknow: PVC & WPC panel, wallpaper, wooden flooring, artificial grass & more. Call 7355004340.">
+    <meta name="keywords" content="interior services Lucknow, PVC panel, WPC panel, wallpaper installation, 3D wall panel, wooden flooring, artificial grass, PVC ceiling Lucknow">
+    <meta name="author" content="Krishna Interior House">
+    <title>Interior Services in Lucknow | Krishna Interior House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== Services Page - Ultra Premium Layout ===== */
+        .services-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: #0d0d0f;
+            padding: 0 !important;
+        }
+
+        .services-hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+        
+        .services-hero-bg img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            animation: zoomBgServices 20s ease infinite alternate;
+        }
+
+        @keyframes zoomBgServices {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .services-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(13, 13, 15, 0.9) 0%, rgba(20, 20, 25, 0.6) 100%);
+            z-index: 2;
+        }
+
+        .services-hero .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            text-align: center;
+            padding: 100px 2rem 20px;
+        }
+
+        .services-hero h1 {
+            font-size: 3.2rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin-bottom: 1.2rem !important;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+            background: linear-gradient(90deg, #ffffff, var(--gold), #ffffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            animation: shimmerText 5s linear infinite;
+            letter-spacing: -0.5px;
+        }
+
+        @keyframes shimmerText {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .services-hero p {
+            font-size: 1.15rem !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            max-width: 700px;
+            margin: 0 auto !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+            line-height: 1.8 !important;
+        }
+
+        /* ===== Services Grid Section ===== */
+        .services-full {
+            padding: 120px 0;
+            background: #fafaf8; /* Premium warm background */
+            position: relative;
+        }
+
+        .services-full::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Premium Floating Service Cards */
+        .svc-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .svc-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        .svc-card-img {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            transform: translateZ(10px);
+        }
+
+        .svc-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+        }
+
+        .svc-card:hover .svc-card-img img {
+            transform: scale(1.08);
+        }
+
+        /* Golden Tag styling */
+        .svc-card-img::before {
+            content: 'PREMIUM';
+            position: absolute;
+            top: 15px; left: 15px;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 5px 12px;
+            border-radius: 50px;
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(212,175,55,0.3);
+            transition: all 0.4s ease;
+        }
+
+        .svc-card:hover .svc-card-img::before {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212,175,55,0.5);
+        }
+
+        /* Overlay gradient on hover */
+        .svc-card-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(26,26,26,0.4) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .svc-card:hover .svc-card-img::after {
+            opacity: 1;
+        }
+
+        /* Premium Arrow badge */
+        .svc-card-img .svc-arrow {
+            position: absolute;
+            bottom: 15px; right: 15px;
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #ffffff;
+            font-size: 0.95rem;
+            opacity: 0;
+            transform: translateY(10px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 3;
+            box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+        }
+
+        .svc-card:hover .svc-arrow {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .svc-card-body {
+            padding: 1.5rem 1.4rem 1.6rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background: #ffffff;
+            transform: translateZ(20px);
+        }
+
+        .svc-card-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.35;
+            transition: color 0.3s ease;
+        }
+
+        .svc-card:hover .svc-card-name {
+            color: var(--gold);
+        }
+
+        .svc-card-desc {
+            font-size: 0.88rem;
+            color: #555555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Gold animated bottom border */
+        .svc-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 4px;
+            background: linear-gradient(90deg, var(--gold), #f9e29a, var(--gold));
+            background-size: 200% auto;
+            border-radius: 0 0 24px 24px;
+            transition: width 0.5s ease;
+        }
+
+        .svc-card:hover::after {
+            width: 100%;
+            animation: shimmerText 2s linear infinite;
+        }
+
+        /* ===== Responsive Settings ===== */
+        @media (max-width: 1200px) {
+            .svc-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-full {
+                padding: 80px 0;
+            }
+            .svc-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-hero h1 {
+                font-size: 2.6rem !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .svc-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-hero h1 {
+                font-size: 2.1rem !important;
+            }
+            .services-hero p {
+                font-size: 1rem !important;
+            }
+            .svc-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            .svc-card-body {
+                padding: 1.3rem 1rem;
+            }
+            .svc-card-name {
+                font-size: 1.05rem;
+            }
+            .svc-card-desc {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            .svc-card-img {
+                height: 170px;
+            }
+        }
+
+        /* ===== Redesigned Process Section (Dark Theme) ===== */
+        .process-section {
+            padding: 120px 0 !important;
+            background: #0b0b0d !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: 5%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .process-section::after {
+            content: '';
+            position: absolute;
+            bottom: 5%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .process-section .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .process-section .section-header h2 {
+            font-size: 2.8rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin-bottom: 15px !important;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .process-section .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .process-section .section-header p {
+            font-size: 1rem !important;
+            color: var(--gold) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            font-weight: 700 !important;
+            margin-top: 15px !important;
+        }
+
+        .process-track-wrapper {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* The horizontal connector line for desktop screen width >= 1025px */
+        @media (min-width: 1025px) {
+            .process-track-wrapper::before {
+                content: '';
+                position: absolute;
+                top: 95px; /* Centers with the 80px icon box at its relative top offset */
+                left: 8%;
+                right: 8%;
+                height: 2px;
+                background: linear-gradient(90deg, 
+                    rgba(212, 175, 55, 0) 0%, 
+                    rgba(212, 175, 55, 0.3) 15%, 
+                    rgba(212, 175, 55, 0.8) 50%, 
+                    rgba(212, 175, 55, 0.3) 85%, 
+                    rgba(212, 175, 55, 0) 100%
+                );
+                z-index: 1;
+            }
+        }
+
+        .process-steps {
+            display: grid !important;
+            grid-template-columns: repeat(6, 1fr) !important;
+            gap: 1.5rem !important;
+            margin: 0 !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step {
+            background: rgba(22, 22, 26, 0.65) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(212, 175, 55, 0.08) !important;
+            border-radius: 24px !important;
+            padding: 35px 20px 30px !important;
+            text-align: center !important;
+            position: relative !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s ease, background-color 0.6s ease !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            cursor: pointer !important;
+            overflow: hidden !important;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        /* Gold animated top border */
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), #f9e29a, var(--gold));
+            background-size: 200% auto;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 4;
+        }
+
+        .step:hover::before {
+            transform: scaleX(1);
+            animation: shimmerText 2s linear infinite;
+        }
+
+        /* Floating glow shadow */
+        .step::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+
+        .step:hover::after {
+            opacity: 1;
+        }
+
+        .step:hover {
+            transform: translateY(-12px) scale(1.02) !important;
+            border-color: rgba(212, 175, 55, 0.4) !important;
+            box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15) !important;
+            background: rgba(26, 26, 32, 0.85) !important;
+        }
+
+        /* Floating background number watermark */
+        .step .step-number {
+            position: absolute !important;
+            top: 15px !important;
+            right: 20px !important;
+            font-size: 2.2rem !important;
+            font-weight: 800 !important;
+            line-height: 1 !important;
+            color: rgba(212, 175, 55, 0.05) !important;
+            margin-bottom: 0 !important;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            transform: translateZ(30px);
+        }
+
+        .step:hover .step-number {
+            color: rgba(212, 175, 55, 0.25) !important;
+            transform: translateZ(40px) scale(1.1);
+        }
+
+        /* Icon Container styling */
+        .step-icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1d1d22 0%, #121215 100%);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            z-index: 3;
+            transform: translateZ(20px);
+        }
+
+        .step-icon-box i {
+            font-size: 1.8rem;
+            color: var(--gold);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Icon box outer glowing ring */
+        .step-icon-box::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .step:hover .step-icon-box {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+            border-color: transparent;
+            transform: translateZ(25px) scale(1.05);
+        }
+
+        .step:hover .step-icon-box i {
+            color: #ffffff;
+            transform: rotateY(360deg);
+        }
+
+        .step:hover .step-icon-box::after {
+            opacity: 0.45;
+            transform: scale(1);
+        }
+
+        .step h3 {
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 12px !important;
+            transition: color 0.3s ease !important;
+            transform: translateZ(25px);
+        }
+
+        .step:hover h3 {
+            color: var(--gold) !important;
+        }
+
+        .step p {
+            font-size: 0.9rem !important;
+            color: rgba(255, 255, 255, 0.6) !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+            transition: color 0.3s ease !important;
+            transform: translateZ(15px);
+        }
+
+        .step:hover p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* Redefined responsive rules for process-steps */
+        @media (max-width: 1200px) {
+            .process-steps {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-section {
+                padding: 80px 0 !important;
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+            .process-section .section-header h2 {
+                font-size: 2.2rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .process-steps {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .step {
+                padding: 30px 20px 25px !important;
+            }
+            .step-icon-box {
+                width: 75px;
+                height: 75px;
+                margin-bottom: 20px;
+            }
+            .step-icon-box i {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ===== Contact CTA - Light Theme Upgrade ===== */
+        .contact-cta {
+            background: linear-gradient(135deg, #fafaf8 0%, #f7f3eb 100%) !important;
+            color: var(--primary-color) !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.15) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important;
+            padding: 100px 0 !important;
+        }
+
+        .contact-cta::before {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(26, 26, 26, 0.03) 0%, transparent 40%) !important;
+        }
+
+        .contact-cta::after {
+            opacity: 0.15 !important; /* Subtler pattern on light background */
+        }
+
+        .contact-cta h2 {
+            text-shadow: none !important;
+            background: linear-gradient(to right, var(--primary-color) 30%, var(--gold) 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            font-weight: 800 !important;
+        }
+
+        .contact-cta p {
+            color: #555555 !important;
+            font-weight: 500 !important;
+        }
+
+        .contact-buttons .btn {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06) !important;
+        }
+
+        .contact-cta .btn-secondary {
+            color: var(--primary-color) !important;
+            border-color: rgba(26, 26, 32, 0.2) !important;
+            background: transparent !important;
+        }
+
+        .contact-cta .btn-secondary:hover {
+            background: var(--primary-color) !important;
+            color: var(--gold) !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 10px 25px rgba(26, 26, 32, 0.15) !important;
+        }
+
+        .contact-cta .btn-secondary i {
+            color: #25D366 !important; /* Green WhatsApp icon */
+            margin-right: 6px !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .contact-cta .btn-secondary:hover i {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="nav-logo-img">
+                <span>Krishna Interior House</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link active">Services <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu-container">
+                        <div class="dropdown-menu-grid">
+                            <a href="service-detail.html?id=pvc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-square"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Panel & Ceiling</span>
+                                    <span class="item-desc">Moisture-resistant panels</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wpc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">WPC Panel</span>
+                                    <span class="item-desc">Wood-plastic composite</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=uv-marble" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-gem"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">UV Marble Sheets</span>
+                                    <span class="item-desc">High-gloss marble finish</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=3d-panels" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-cube"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">3D Panels</span>
+                                    <span class="item-desc">Textured wall designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wallpaper" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-image"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wallpapers</span>
+                                    <span class="item-desc">Custom prints & designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wooden-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-tree"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wooden Flooring</span>
+                                    <span class="item-desc">Hardwood & laminate</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=pvc-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-border-all"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Flooring</span>
+                                    <span class="item-desc">Waterproof flooring</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=artificial-grass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Artificial Grass</span>
+                                    <span class="item-desc">Low maintenance lawns</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wall-molding" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-columns"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wall Molding</span>
+                                    <span class="item-desc">European classic style</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=mosaic-glass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-shapes"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Mosaic Glass Work</span>
+                                    <span class="item-desc">Artistic glass designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=sofit-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-th-large"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Sofit Panel</span>
+                                    <span class="item-desc">Soffit under-ceilings</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=window-curtains" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-window-maximize"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Window Curtains</span>
+                                    <span class="item-desc">Custom stitched fabrics</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <a href="services.html" class="all-services-link">View All Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get Free Quote</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="services-hero">
+        <div class="services-hero-bg">
+            <img src="assets/gallery1/livinroom/l2.jpg" alt="Premium Services Background">
+        </div>
+        <div class="services-hero-overlay"></div>
+        <div class="hero-content" data-text-content data-aos="zoom-in" data-aos-duration="1200">
+            <h1>Premium Interior Services in Lucknow</h1>
+            <p>At Krishna Interior House, we offer a comprehensive range of interior solutions for residential, commercial, and institutional spaces. Every project is handled with precision, quality materials, and expert craftsmanship.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-full">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Premium Interior Solutions</h2>
+                <p>Led by Vijay Kumar Yadav, we provide a wide selection of designs tailored to your space and requirements.</p>
+            </div>
+            <!-- Compact Animated Service Cards -->
+            <div class="svc-grid">
+
+                <!-- PVC Panel -->
+                <a href="service-detail.html?id=pvc-panel" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="svc-card-img">
+                        <img src="assets/services/New folderPVC Panel & PVC Ceiling/pvc3.jpg" alt="PVC Panel & PVC Ceiling">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">PVC Panel & PVC Ceiling</span>
+                        <p class="svc-card-desc">Moisture-resistant, easy-clean panels in hundreds of stylish designs.</p>
+                    </div>
+                </a>
+
+                <!-- WPC Panel -->
+                <a href="service-detail.html?id=wpc-panel" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="60">
+                    <div class="svc-card-img">
+                        <img src="assets/services/WPC Panel/wpc.jpg" alt="WPC Panel">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">WPC Panel</span>
+                        <p class="svc-card-desc">Premium wood-plastic composite panels with realistic wood finish.</p>
+                    </div>
+                </a>
+
+                <!-- UV Marble Sheets -->
+                <a href="service-detail.html?id=uv-marble" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="120">
+                    <div class="svc-card-img">
+                        <img src="assets/services/UV Marble Sheets/uv marbel.jpg" alt="UV Marble Sheets">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">UV Marble Sheets</span>
+                        <p class="svc-card-desc">Luxurious high-gloss marble finish at a fraction of the cost.</p>
+                    </div>
+                </a>
+
+                <!-- 3D Wall Panels -->
+                <a href="service-detail.html?id=3d-panels" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="180">
+                    <div class="svc-card-img">
+                        <img src="assets/services/3D Panels/3d.jpg" alt="3D Wall Panels">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">3D Wall Panels</span>
+                        <p class="svc-card-desc">Textured panels that create stunning light and shadow depth.</p>
+                    </div>
+                </a>
+
+                <!-- Wallpaper -->
+                <a href="service-detail.html?id=wallpaper" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Wallpaper & Customized Wallpaper/wallpaper.jpg" alt="Wallpaper">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Wallpaper & Customized Wallpaper</span>
+                        <p class="svc-card-desc">1000+ designs from floral to scenic, with custom photo prints.</p>
+                    </div>
+                </a>
+
+                <!-- Wooden Flooring -->
+                <a href="service-detail.html?id=wooden-flooring" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="60">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Wooden Flooring/wf.jpg" alt="Wooden Flooring">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Wooden Flooring</span>
+                        <p class="svc-card-desc">Solid hardwood, engineered wood & laminate — warm and durable.</p>
+                    </div>
+                </a>
+
+                <!-- PVC Flooring -->
+                <a href="service-detail.html?id=pvc-flooring" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="120">
+                    <div class="svc-card-img">
+                        <img src="assets/services/PVC Flooring/pf.jpg" alt="PVC Flooring">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">PVC Flooring</span>
+                        <p class="svc-card-desc">100% waterproof, anti-slip flooring in wood, marble & stone textures.</p>
+                    </div>
+                </a>
+
+                <!-- Artificial Grass -->
+                <a href="service-detail.html?id=artificial-grass" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="180">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Artificial Garden & Grass Design/ag.jpg" alt="Artificial Grass">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Artificial Garden & Grass Design</span>
+                        <p class="svc-card-desc">Zero-maintenance lush green decor for indoors and outdoors.</p>
+                    </div>
+                </a>
+
+                <!-- Wall Molding -->
+                <a href="service-detail.html?id=wall-molding" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Wall Molding with Wallpaper/wm.jpg" alt="Wall Molding">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Wall Molding with Wallpaper</span>
+                        <p class="svc-card-desc">Classic European-inspired panels with premium wallpaper combination.</p>
+                    </div>
+                </a>
+
+                <!-- Mosaic Glass -->
+                <a href="service-detail.html?id=mosaic-glass" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="60">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Mosaic Glass Work/mg.jpg" alt="Mosaic Glass Work">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Mosaic Glass Work</span>
+                        <p class="svc-card-desc">Artistic decorative glass panels for walls, partitions and bathrooms.</p>
+                    </div>
+                </a>
+
+                <!-- Sofit Panel -->
+                <a href="service-detail.html?id=sofit-panel" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="120">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Sofit Panel/sp.jpg" alt="Sofit Panel">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Sofit Panel</span>
+                        <p class="svc-card-desc">Weatherproof ceiling & overhang panels for a clean modern finish.</p>
+                    </div>
+                </a>
+
+                <!-- Window Curtains -->
+                <a href="service-detail.html?id=window-curtains" class="svc-card" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="180">
+                    <div class="svc-card-img">
+                        <img src="assets/services/Window Curtains/wc.jpg" alt="Window Curtains">
+                        <span class="svc-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="svc-card-body">
+                        <span class="svc-card-name">Window Curtains</span>
+                        <p class="svc-card-desc">Custom stitched sheers, curtains & blackout options for every room.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Process</h2>
+                <p>From Concept to Completion</p>
+            </div>
+            <div class="process-track-wrapper">
+                <div class="process-steps">
+                    <!-- Step 1 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="0" data-tilt data-tilt-max="6">
+                        <div class="step-number">01</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Consultation</h3>
+                        <p>Understand your vision, style preferences, and detailed requirements.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="6">
+                        <div class="step-number">02</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Design Concept</h3>
+                        <p>Create a customized design plan, layouts, mood boards, and 3D renders.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="6">
+                        <div class="step-number">03</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Transparent Quote</h3>
+                        <p>Provide detailed transparent pricing and material selection choices.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="6">
+                        <div class="step-number">04</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Precise Execution</h3>
+                        <p>Professional installation, site supervision, and execution by skilled artisans.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="6">
+                        <div class="step-number">05</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>Quality Audit</h3>
+                        <p>Rigorous quality checks at every level to ensure it meets our gold standards.</p>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="step" data-aos="fade-up" data-aos-delay="500" data-tilt data-tilt-max="6">
+                        <div class="step-number">06</div>
+                        <div class="step-icon-box">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Seamless Handover</h3>
+                        <p>Final styling check, clean-up, and handover of your beautiful dream space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-delay="100">Ready to Transform Your Space?</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Get Your Free Consultation Today</p>
+            <div class="contact-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="https://wa.me/917355004340" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ultra Premium -->
+    <footer class="footer premium-footer">
+        <div class="footer-particles"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Krishna Interior House</span>
+                    </div>
+                    <p class="footer-about-text">We specialize in transforming ordinary spaces into extraordinary luxury experiences with our premium interior design services in Lucknow.</p>
+                    <div class="social-links magnetic-socials">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="animated-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Portfolio Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="animated-links">
+                        <li><a href="service-detail.html?id=pvc-panel">PVC Panels</a></li>
+                        <li><a href="service-detail.html?id=wpc-panel">WPC Panels</a></li>
+                        <li><a href="service-detail.html?id=wooden-flooring">Wooden Flooring</a></li>
+                        <li><a href="service-detail.html?id=wallpaper">Wallpapers</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-map-section">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Vill. Jehta, Near Union Bank, Jehta Mall Road, Lucknow, UP</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+917355004340">+91 73550 04340</a></p>
+                        <p><i class="fas fa-user-tie"></i> <strong>Vijay Kumar Yadav</strong></p>
+                    </div>
+                    <!-- Small Map -->
+                    <div class="footer-map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1130635467027!2d80.816407!3d26.8999337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2345864117%3A0xe5419999a4c0a1e0!2sUnion%20Bank%20Of%20India%20Jehta!5e0!3m2!1sen!2sin!4v1716478900000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Krishna Interior House. Designed with <i class="fas fa-heart" style="color:var(--gold);"></i> in Lucknow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917355004340" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/services.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 60 });
+    </script>
+</body>
+</html>
+
+

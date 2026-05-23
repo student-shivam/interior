@@ -1,0 +1,1162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore premium interior services by Krishna Interior House Lucknow. View our work gallery and get a free quote.">
+    <meta name="author" content="Krishna Interior House">
+    <title>Service Details | Krishna Interior House Lucknow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ==================== Service Detail Page Styles ==================== */
+        .sd-hero {
+            height: 42vh;
+            min-height: 280px;
+            max-height: 420px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Full-width background image */
+        .sd-hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1.06);
+            animation: heroBgZoom 8s ease both;
+            z-index: 0;
+        }
+
+        @keyframes heroBgZoom {
+            from { transform: scale(1.12); }
+            to   { transform: scale(1.0); }
+        }
+
+        /* Dark gradient overlay — lighter so image is visible */
+                .sd-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4); /* Lighter overlay for visible image */
+            z-index: 1;
+        }
+
+        /* Gold bottom glow line */
+        .sd-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            animation: borderGlow 3s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Text overlay container */
+                .sd-hero-overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 80px 3rem 2rem;  /* top padding accounts for navbar height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            animation: fadeInUp 0.7s ease both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Gold accent bar */
+        .sd-hero-overlay::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+            animation: expandBar 0.8s 0.2s ease both;
+        }
+
+        @keyframes expandBar {
+            from { width: 0; }
+            to   { width: 48px; }
+        }
+
+        .sd-hero-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0;
+            animation: fadeUp 0.5s 0.25s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .sd-hero h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            opacity: 0;
+            animation: fadeUp 0.5s 0.4s ease both;
+            text-shadow: 0 2px 25px rgba(0,0,0,0.6);
+        }
+
+        .sd-hero h1 span {
+            background: linear-gradient(135deg, var(--gold), #f9e29a, var(--gold));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGradient 4s linear infinite;
+        }
+
+        @keyframes textGradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .sd-hero-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.5;
+            margin: 0;
+            max-width: 560px;
+            opacity: 0;
+            animation: fadeUp 0.5s 0.55s ease both;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+        }
+
+        .sd-hero .breadcrumb {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.82rem;
+            opacity: 0;
+            animation: fadeUp 0.5s 0.7s ease both;
+            margin-top: 0.2rem;
+        }
+
+        .sd-hero .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sd-hero .breadcrumb a:hover { color: #f9e29a; }
+
+        /* ==================== Main Content Layout ==================== */
+        .sd-content {
+            padding: 4rem 0 5rem;
+            background: #fafafa;
+        }
+
+        .sd-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Sticky left column for carousel */
+        .sd-layout > div:first-child {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* ==================== Image Carousel ==================== */
+        .sd-carousel {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            background: #000;
+            aspect-ratio: 4/3;
+        }
+
+        .sd-carousel-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sd-carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1.05);
+        }
+
+        .sd-carousel-slide.active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 1;
+        }
+
+        .sd-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Carousel Arrows */
+        .sd-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.4);
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sd-arrow:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #1a1a2e;
+            transform: translateY(-50%) scale(1.15);
+            box-shadow: 0 0 25px rgba(212,175,55,0.5);
+        }
+
+        .sd-arrow.prev { left: 15px; }
+        .sd-arrow.next { right: 15px; }
+
+        /* Carousel Dots */
+        .sd-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: flex;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+        }
+
+        .sd-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: none;
+        }
+
+        .sd-dot.active {
+            background: var(--gold);
+            width: 28px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(212,175,55,0.5);
+        }
+
+        /* Image Counter Badge */
+        .sd-counter {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 5;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .sd-counter span {
+            color: var(--gold);
+        }
+
+        /* Thumbnail Strip */
+        .sd-thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            overflow-x: auto;
+            padding: 5px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) transparent;
+        }
+
+        .sd-thumbnails::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .sd-thumbnails::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .sd-thumb {
+            flex-shrink: 0;
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .sd-thumb.active {
+            border-color: var(--gold);
+            opacity: 1;
+            box-shadow: 0 0 12px rgba(212,175,55,0.4);
+        }
+
+        .sd-thumb:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .sd-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ==================== Service Info Panel ==================== */
+        .sd-info {
+            padding: 2rem;
+        }
+
+        .sd-badge {
+            display: inline-block;
+            padding: 6px 18px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.2); }
+            50% { box-shadow: 0 0 0 8px rgba(212,175,55,0); }
+        }
+
+        .sd-info h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .sd-description {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* Features List */
+        .sd-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .sd-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            color: var(--text-color);
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+
+        .sd-features li:hover {
+            padding-left: 10px;
+            color: var(--gold);
+        }
+
+        .sd-features li i {
+            color: var(--gold);
+            font-size: 0.9rem;
+            width: 28px;
+            height: 28px;
+            background: rgba(212,175,55,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .sd-features li:hover i {
+            background: var(--gold);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        /* Ideal For Section */
+        .sd-ideal {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sd-ideal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(212,175,55,0.1) 0%, transparent 60%);
+        }
+
+        .sd-ideal h4 {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .sd-ideal p {
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* Action Buttons */
+        .sd-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .sd-actions .btn {
+            flex: 1;
+            min-width: 160px;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        .sd-actions .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+        }
+
+        .sd-actions .btn-whatsapp:hover {
+            background: #128c48;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+        }
+
+        /* ==================== Related Services ==================== */
+        .sd-related {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .sd-related .services-grid {
+            grid-template-columns: repeat(4, 1fr);
+            max-height: none !important;
+        }
+
+        .sd-related .services-grid::before {
+            display: none !important;
+        }
+
+        /* ==================== Responsive ==================== */
+        @media (max-width: 992px) {
+            .sd-layout { grid-template-columns: 1fr; }
+            .sd-hero h1 { font-size: 2.1rem; }
+            .sd-related .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .sd-hero { height: 38vh; min-height: 250px; max-height: 360px; }
+            .sd-hero h1 { font-size: 1.75rem; }
+            .sd-hero-desc { font-size: 0.9rem; }
+            .sd-hero-overlay { padding: 75px 1.5rem 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .sd-hero { height: 35vh; min-height: 230px; }
+            .sd-hero h1 { font-size: 1.45rem; }
+            .sd-hero-overlay { padding: 72px 1.2rem 1.2rem; }
+            .sd-info h2 { font-size: 1.5rem; }
+            .sd-arrow { width: 38px; height: 38px; font-size: 0.95rem; }
+            .sd-actions { flex-direction: column; }
+            .sd-related .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="nav-logo-img">
+                <span>Krishna Interior House</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link active">Services <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu-container">
+                        <div class="dropdown-menu-grid">
+                            <a href="service-detail.html?id=pvc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-square"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Panel & Ceiling</span>
+                                    <span class="item-desc">Moisture-resistant panels</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wpc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">WPC Panel</span>
+                                    <span class="item-desc">Wood-plastic composite</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=uv-marble" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-gem"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">UV Marble Sheets</span>
+                                    <span class="item-desc">High-gloss marble finish</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=3d-panels" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-cube"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">3D Panels</span>
+                                    <span class="item-desc">Textured wall designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wallpaper" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-image"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wallpapers</span>
+                                    <span class="item-desc">Custom prints & designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wooden-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-tree"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wooden Flooring</span>
+                                    <span class="item-desc">Hardwood & laminate</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=pvc-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-border-all"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Flooring</span>
+                                    <span class="item-desc">Waterproof flooring</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=artificial-grass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Artificial Grass</span>
+                                    <span class="item-desc">Low maintenance lawns</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wall-molding" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-columns"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wall Molding</span>
+                                    <span class="item-desc">European classic style</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=mosaic-glass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-shapes"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Mosaic Glass Work</span>
+                                    <span class="item-desc">Artistic glass designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=sofit-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-th-large"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Sofit Panel</span>
+                                    <span class="item-desc">Soffit under-ceilings</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=window-curtains" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-window-maximize"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Window Curtains</span>
+                                    <span class="item-desc">Custom stitched fabrics</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <a href="services.html" class="all-services-link">View All Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get Free Quote</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="sd-hero" id="sd-hero">
+        <!-- Full-width background image -->
+        <img src="" alt="" id="sd-hero-img" class="sd-hero-bg" loading="eager">
+        <!-- Text overlay -->
+        <div class="sd-hero-overlay">
+            <span class="sd-hero-label">Premium Service</span>
+            <h1 id="sd-hero-title">Service <span>Detail</span></h1>
+            <p class="sd-hero-desc" id="sd-hero-desc"></p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="services.html">Services</a> &nbsp;/&nbsp; <span id="sd-breadcrumb">Detail</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="sd-content">
+        <div class="container">
+            <div class="sd-layout">
+                <!-- Image Carousel -->
+                <div>
+                    <div class="sd-carousel" id="sd-carousel">
+                        <div class="sd-carousel-track" id="sd-track">
+                            <!-- Slides injected by JS -->
+                        </div>
+                        <button class="sd-arrow prev" id="sd-prev" title="Previous Image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="sd-arrow next" id="sd-next" title="Next Image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="sd-counter">
+                            <span id="sd-current">1</span> / <span id="sd-total">1</span>
+                        </div>
+                        <div class="sd-dots" id="sd-dots">
+                            <!-- Dots injected by JS -->
+                        </div>
+                    </div>
+                    <div class="sd-thumbnails" id="sd-thumbnails">
+                        <!-- Thumbnails injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Service Info -->
+                <div class="sd-info">
+                    <div class="sd-badge">Premium Service</div>
+                    <h2 id="sd-title">Service Name</h2>
+                    <p class="sd-description" id="sd-description">Service description will appear here.</p>
+                    <ul class="sd-features" id="sd-features">
+                        <!-- Features injected by JS -->
+                    </ul>
+                    <div class="sd-ideal" id="sd-ideal" style="display:none;">
+                        <h4><i class="fas fa-star"></i> Ideal For</h4>
+                        <p id="sd-ideal-text"></p>
+                    </div>
+                    <div class="sd-actions">
+                        <a href="contact.html" class="btn btn-primary" id="sd-quote-btn">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Get Free Quote
+                        </a>
+                        <a href="https://wa.me/917355004340" class="btn btn-whatsapp" target="_blank" id="sd-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>&nbsp; WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="sd-related">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore More Services</h2>
+                <p>Discover our other premium interior solutions</p>
+            </div>
+            <div class="services-grid" id="sd-related-grid">
+                <!-- Related services injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ultra Premium -->
+    <footer class="footer premium-footer">
+        <div class="footer-particles"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Krishna Interior House</span>
+                    </div>
+                    <p class="footer-about-text">We specialize in transforming ordinary spaces into extraordinary luxury experiences with our premium interior design services in Lucknow.</p>
+                    <div class="social-links magnetic-socials">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="animated-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Portfolio Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="animated-links">
+                        <li><a href="service-detail.html?id=pvc-panel">PVC Panels</a></li>
+                        <li><a href="service-detail.html?id=wpc-panel">WPC Panels</a></li>
+                        <li><a href="service-detail.html?id=wooden-flooring">Wooden Flooring</a></li>
+                        <li><a href="service-detail.html?id=wallpaper">Wallpapers</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-map-section">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Vill. Jehta, Near Union Bank, Jehta Mall Road, Lucknow, UP</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+917355004340">+91 73550 04340</a></p>
+                        <p><i class="fas fa-user-tie"></i> <strong>Vijay Kumar Yadav</strong></p>
+                    </div>
+                    <!-- Small Map -->
+                    <div class="footer-map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1130635467027!2d80.816407!3d26.8999337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2345864117%3A0xe5419999a4c0a1e0!2sUnion%20Bank%20Of%20India%20Jehta!5e0!3m2!1sen!2sin!4v1716478900000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Krishna Interior House. Designed with <i class="fas fa-heart" style="color:var(--gold);"></i> in Lucknow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917355004340" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/services-data.js"></script>
+    <script>
+    // ==================== Service Detail Data ====================
+    const SERVICE_INFO = {
+        "pvc-panel": {
+            name: "PVC Panel & PVC Ceiling",
+            icon: "fas fa-square",
+            description: "PVC (Polyvinyl Chloride) panels are one of the most popular modern ceiling and wall solutions for homes and offices. At Krishna Interior House, we install high-quality PVC panels that are moisture & termite resistant, easy to clean and maintain, available in hundreds of designs and finishes, and cost-effective compared to traditional plaster. Our expert team ensures seamless installation with a flawless finish that transforms any room into a modern masterpiece.",
+            features: [
+                "Moisture & termite resistant",
+                "Easy to clean and maintain",
+                "Available in hundreds of designs and finishes",
+                "Cost-effective compared to traditional plaster",
+                "Lightweight and easy to install",
+                "10+ years durability"
+            ],
+            ideal: "Bedrooms, living rooms, kitchens, bathrooms, offices"
+        },
+        "wpc-panel": {
+            name: "WPC Panel",
+            icon: "fas fa-layer-group",
+            description: "WPC (Wood Plastic Composite) panels combine the beauty of wood with the durability of plastic. Our WPC panels are perfect for feature walls, TV units, partitions, and commercial spaces. They offer a premium wood-like finish without the maintenance hassles of real wood. Our expert craftsmen ensure precision cutting and seamless installation for a flawless, designer look.",
+            features: [
+                "Eco-friendly and sustainable",
+                "High resistance to water and fire",
+                "Realistic wood texture and finish",
+                "Zero warping or cracking over time",
+                "UV-resistant coating",
+                "Premium designer patterns"
+            ],
+            ideal: "Feature walls, TV units, partitions, commercial spaces"
+        },
+        "uv-marble": {
+            name: "UV Marble Sheets",
+            icon: "fas fa-gem",
+            description: "Get the luxurious look of real marble at a fraction of the cost with our UV marble sheets. These high-gloss sheets provide a stunning, realistic marble finish that is beautiful, durable, and highly cost-effective. Perfect for creating luxury interiors without the heavy price tag of natural marble.",
+            features: [
+                "Feature walls and accent panels",
+                "Kitchen and bathroom surfaces",
+                "Commercial reception areas",
+                "High-gloss mirror-like finish",
+                "Scratch and stain resistant",
+                "Easy installation process"
+            ],
+            ideal: "Reception areas, living rooms, bathrooms, commercial spaces"
+        },
+        "3d-panels": {
+            name: "3D Wall Panels",
+            icon: "fas fa-cube",
+            description: "Add depth and drama to any room with our 3D wall panels. These textured panels create a striking visual effect, turning blank walls into design statements. Available in a wide range of geometric and organic patterns that create stunning light and shadow play.",
+            features: [
+                "Living rooms and bedrooms",
+                "Hotels, restaurants, and cafés",
+                "Office lobbies and reception areas",
+                "Multiple geometric patterns available",
+                "Paint-ready surface",
+                "Fire-resistant materials"
+            ],
+            ideal: "Living rooms, bedrooms, hotels, restaurants, cafés, office lobbies"
+        },
+        "wallpaper": {
+            name: "Wallpaper & Customized Wallpaper",
+            icon: "fas fa-image",
+            description: "We offer a vast collection of premium wallpapers from leading brands, tailored to your aesthetic choices with seamless installation. From floral to geometric, abstract to scenic — we have wallpapers for every taste. We also offer customized photo wallpapers where you can print your own images and designs.",
+            features: [
+                "Floral, geometric, abstract & scenic designs",
+                "Customized photo wallpapers with your own image",
+                "Vinyl, fabric, and non-woven wallpapers",
+                "Easy installation and removal",
+                "Washable and long-lasting",
+                "1000+ designs available"
+            ],
+            ideal: "Any room — bedrooms, living rooms, offices, restaurants"
+        },
+        "wooden-flooring": {
+            name: "Wooden Flooring",
+            icon: "fas fa-tree",
+            description: "Elevate the look of your home with beautiful wooden flooring. We offer multiple options that combine warmth and long-lasting durability. From solid hardwood to engineered wood and laminate, we have the perfect flooring solution for every budget and style preference.",
+            features: [
+                "Solid hardwood flooring",
+                "Engineered wood flooring",
+                "Laminate flooring",
+                "Anti-scratch and water-resistant options",
+                "Wide range of textures and colors",
+                "Professional installation with warranty"
+            ],
+            ideal: "Bedrooms, living rooms, offices, commercial showrooms"
+        },
+        "pvc-flooring": {
+            name: "PVC Flooring",
+            icon: "fas fa-border-all",
+            description: "Our PVC flooring solutions are ideal for high-traffic areas, kitchens, and commercial spaces. They are durable, easy to install, and waterproof. Available in realistic wood, marble, and stone textures that look premium while being extremely practical and maintenance-free.",
+            features: [
+                "100% waterproof",
+                "Anti-slip surface",
+                "Available in wood, marble, and stone textures",
+                "Quick and easy installation",
+                "Scratch-resistant top layer",
+                "Affordable premium solution"
+            ],
+            ideal: "Kitchens, bathrooms, commercial spaces, high-traffic areas"
+        },
+        "artificial-grass": {
+            name: "Artificial Garden & Grass Design",
+            icon: "fas fa-leaf",
+            description: "Bring the beauty of nature indoors with our artificial garden and green wall designs. Completely maintenance-free, lush green decor that stays perfect all year round. Our artificial grass solutions are UV-resistant, durable, and available in customizable shapes and sizes.",
+            features: [
+                "Zero maintenance and always green",
+                "UV-resistant and long-lasting",
+                "Customizable shapes and sizes",
+                "Perfect for homes, offices, restaurants, and event spaces",
+                "Natural look and feel",
+                "Pet-friendly and child-safe"
+            ],
+            ideal: "Balconies, terraces, offices, restaurants, event spaces"
+        },
+        "wall-molding": {
+            name: "Wall Molding with Wallpaper",
+            icon: "fas fa-columns",
+            description: "Classic European-inspired wall paneling with molding strips combined with premium wallpaper creates a timeless, luxurious interior look. This elegant combination adds depth and sophistication to any room, creating a designer finish that stands out.",
+            features: [
+                "Classic European design patterns",
+                "Seamless molding integration",
+                "Premium textured wallpapers",
+                "Custom panel sizes and shapes",
+                "Professional paint matching",
+                "Luxury finish at affordable price"
+            ],
+            ideal: "Drawing rooms, bedrooms, hotel lobbies, office cabins"
+        },
+        "mosaic-glass": {
+            name: "Mosaic Glass Work",
+            icon: "fas fa-shapes",
+            description: "Decorative mosaic glass panels add an artistic and elegant touch to walls, partitions, and bathrooms. Each piece is carefully crafted to create stunning visual patterns that transform ordinary surfaces into works of art.",
+            features: [
+                "Custom artistic designs and murals",
+                "High-quality reflective tiles",
+                "Perfect for feature accents",
+                "Waterproof and durable",
+                "Available in multiple color combinations",
+                "Adds luxury to any space"
+            ],
+            ideal: "Bathrooms, feature walls, partitions, commercial spaces"
+        },
+        "sofit-panel": {
+            name: "Sofit Panel",
+            icon: "fas fa-th-large",
+            description: "Sofit panels are used for ceilings, overhangs, and soffits in residential and commercial projects, offering a clean, contemporary finish. Our premium aluminum and PVC soffit panels are weatherproof, durable, and add a modern aesthetic to any architecture.",
+            features: [
+                "Modern design overhang ceilings",
+                "Premium weatherproof finishes",
+                "Durable under-ceiling support",
+                "Multiple color options",
+                "Fire-resistant materials",
+                "Low maintenance"
+            ],
+            ideal: "Porches, corridors, external overhangs, commercial buildings"
+        },
+        "window-curtains": {
+            name: "Window Curtains",
+            icon: "fas fa-window-maximize",
+            description: "Complete your interior look with our custom window curtains. Available in a wide range of fabrics, colors, and styles — from sheers to blackout curtains. We provide precise measurement, expert stitching, and professional installation to ensure a perfect fit every time.",
+            features: [
+                "Sheers, curtains, and blackout options",
+                "Extensive range of premium fabrics",
+                "Precise measurement and setup",
+                "Custom stitching and tailoring",
+                "Motorized curtain options",
+                "Free home consultation"
+            ],
+            ideal: "Bedrooms, living rooms, offices, conference rooms"
+        }
+    };
+
+    // ==================== Get Service ID from URL ====================
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = urlParams.get('id');
+
+    if (!serviceId || !SERVICE_INFO[serviceId]) {
+        window.location.href = 'services.html';
+    }
+
+    const service = SERVICE_INFO[serviceId];
+    const images = SERVICE_IMAGES[serviceId] || [];
+
+    // ==================== Populate Hero ====================
+    // Title: first word plain, rest gold
+    const words = service.name.split(' ');
+    document.getElementById('sd-hero-title').innerHTML = `${words[0]} <span>${words.slice(1).join(' ')}</span>`;
+    document.getElementById('sd-breadcrumb').textContent = service.name;
+    document.title = `${service.name} | Krishna Interior House Lucknow`;
+    // One-line description (first sentence or first 90 chars)
+    const shortDesc = service.description.split('.')[0] + '.';
+    document.getElementById('sd-hero-desc').textContent = shortDesc.length > 100 ? shortDesc.substring(0, 97) + '...' : shortDesc;
+    // Hero image: use first service image
+    const heroImg = SERVICE_IMAGES[serviceId]?.[0] || '';
+    if (heroImg) {
+        document.getElementById('sd-hero-img').src = heroImg;
+        document.getElementById('sd-hero-img').alt = service.name;
+    }
+
+    // ==================== Populate Info ====================
+    document.getElementById('sd-title').textContent = service.name + ' in Lucknow';
+    document.getElementById('sd-description').textContent = service.description;
+
+    // Features
+    const featuresEl = document.getElementById('sd-features');
+    service.features.forEach(f => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="fas fa-check-circle"></i> ${f}`;
+        featuresEl.appendChild(li);
+    });
+
+    // Ideal For
+    if (service.ideal) {
+        document.getElementById('sd-ideal').style.display = 'block';
+        document.getElementById('sd-ideal-text').textContent = service.ideal;
+    }
+
+    // Quote & WhatsApp links
+    document.getElementById('sd-quote-btn').href = `contact.html?service=${serviceId}`;
+    document.getElementById('sd-whatsapp-btn').href = `https://wa.me/917355004340?text=Hi, I'm interested in ${encodeURIComponent(service.name)} service.`;
+
+    // ==================== Image Carousel ====================
+    let currentIndex = 0;
+    const track = document.getElementById('sd-track');
+    const dotsContainer = document.getElementById('sd-dots');
+    const thumbsContainer = document.getElementById('sd-thumbnails');
+    const counterCurrent = document.getElementById('sd-current');
+    const counterTotal = document.getElementById('sd-total');
+
+    counterTotal.textContent = images.length;
+
+    // Create slides, dots, thumbnails
+    images.forEach((src, i) => {
+        // Slide
+        const slide = document.createElement('div');
+        slide.className = 'sd-carousel-slide' + (i === 0 ? ' active' : '');
+        slide.innerHTML = `<img src="${src}" alt="${service.name} - Image ${i+1}" loading="lazy">`;
+        track.appendChild(slide);
+
+        // Dot
+        const dot = document.createElement('button');
+        dot.className = 'sd-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+
+        // Thumbnail
+        const thumb = document.createElement('div');
+        thumb.className = 'sd-thumb' + (i === 0 ? ' active' : '');
+        thumb.innerHTML = `<img src="${src}" alt="Thumb ${i+1}" loading="lazy">`;
+        thumb.addEventListener('click', () => goToSlide(i));
+        thumbsContainer.appendChild(thumb);
+    });
+
+    function goToSlide(index) {
+        const slides = document.querySelectorAll('.sd-carousel-slide');
+        const dots = document.querySelectorAll('.sd-dot');
+        const thumbs = document.querySelectorAll('.sd-thumb');
+
+        slides[currentIndex]?.classList.remove('active');
+        dots[currentIndex]?.classList.remove('active');
+        thumbs[currentIndex]?.classList.remove('active');
+
+        currentIndex = (index + images.length) % images.length;
+
+        slides[currentIndex]?.classList.add('active');
+        dots[currentIndex]?.classList.add('active');
+        thumbs[currentIndex]?.classList.add('active');
+        counterCurrent.textContent = currentIndex + 1;
+
+        // Scroll thumbnail into view
+        thumbs[currentIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    // Arrow buttons
+    document.getElementById('sd-prev').addEventListener('click', () => goToSlide(currentIndex - 1));
+    document.getElementById('sd-next').addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+        if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+    });
+
+    // Auto-play
+    let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
+
+    // Pause on hover
+    document.getElementById('sd-carousel').addEventListener('mouseenter', () => clearInterval(autoPlay));
+    document.getElementById('sd-carousel').addEventListener('mouseleave', () => {
+        autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
+    });
+
+    // Touch/Swipe support
+    let touchStartX = 0;
+    const carousel = document.getElementById('sd-carousel');
+    carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    carousel.addEventListener('touchend', (e) => {
+        const diff = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) goToSlide(currentIndex - 1);
+            else goToSlide(currentIndex + 1);
+        }
+    }, { passive: true });
+
+    // ==================== Related Services ====================
+    const relatedGrid = document.getElementById('sd-related-grid');
+    const allServiceIds = Object.keys(SERVICE_INFO).filter(id => id !== serviceId);
+    // Show 4 random related services
+    const shuffled = allServiceIds.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+    shuffled.forEach(id => {
+        const s = SERVICE_INFO[id];
+        const firstImage = SERVICE_IMAGES[id]?.[0] || '';
+        const card = document.createElement('div');
+        card.className = 'service-card glass-effect';
+        card.style.cursor = 'pointer';
+        card.innerHTML = `
+            <div class="service-icon"><i class="${s.icon}"></i></div>
+            <h3>${s.name}</h3>
+            <p>${s.description.substring(0, 80)}...</p>
+            <span class="read-more">View Details →</span>
+        `;
+        card.addEventListener('click', () => {
+            window.location.href = `service-detail.html?id=${id}`;
+        });
+        relatedGrid.appendChild(card);
+    });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

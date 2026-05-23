@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest interior design guides on PVC panel, WPC panel, wallpaper, wooden flooring & artificial grass in Lucknow by Krishna Interior House.">
+    <meta name="keywords" content="interior design blog, PVC panel Lucknow, WPC panel Lucknow, wallpaper Lucknow, wooden flooring Lucknow, 3D panel Lucknow, artificial grass design Lucknow, interior designer near me Lucknow">
+    <meta name="author" content="Krishna Interior House">
+    <title>Interior Design Blog | Krishna Interior House Lucknow</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== Premium Blog - World-Class Design Upgrade ===== */
+        
+        /* Hero Banner Redesign (No Card Overlay, Text Directly on Banner) */
+        .premium-blog-hero {
+            min-height: 50vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            background: #0d0d0f;
+        }
+
+        .blog-hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+        
+        .blog-hero-bg img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            animation: zoomBgBlog 20s ease infinite alternate;
+        }
+
+        @keyframes zoomBgBlog {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .blog-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(13, 13, 15, 0.85) 0%, rgba(20, 20, 25, 0.6) 100%) !important;
+            z-index: 2;
+        }
+
+        .premium-blog-hero .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            text-align: center;
+            padding: 100px 2rem 40px !important;
+        }
+
+        /* Completely Remove Card Styling */
+        .blog-hero-text-box {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            border: none !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%) !important;
+            color: #ffffff !important;
+            padding: 6px 18px !important;
+            border-radius: 50px !important;
+            font-size: 0.75rem !important;
+            font-weight: 800 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 1.5rem !important;
+            box-shadow: 0 4px 12px rgba(212,175,55,0.3) !important;
+        }
+
+        .premium-blog-hero h1 {
+            font-size: 3.6rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin-bottom: 1.2rem !important;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+            letter-spacing: -0.5px;
+            line-height: 1.2 !important;
+        }
+
+        .premium-blog-hero .gold-text {
+            background: linear-gradient(90deg, var(--gold), #ffffff, var(--gold)) !important;
+            background-size: 200% auto !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            animation: shimmerText 5s linear infinite !important;
+        }
+
+        .premium-blog-hero p {
+            font-size: 1.2rem !important;
+            color: rgba(255, 255, 255, 0.95) !important;
+            max-width: 650px !important;
+            margin: 0 auto !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+            line-height: 1.8 !important;
+        }
+
+        /* Particles animation in hero */
+        .animated-particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px) !important;
+            background-size: 40px 40px !important;
+            opacity: 0.4 !important;
+            animation: floatParticles 25s linear infinite !important;
+            display: block !important;
+            z-index: 2;
+        }
+
+        /* Blog Main Section Light Theme Styling */
+        .blog-section {
+            background: #fafaf8 !important; /* Warm premium layout */
+            padding: 120px 0 !important;
+            position: relative;
+        }
+
+        .blog-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+
+        .blog-section .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .blog-section .section-header h2 {
+            font-size: 2.8rem !important;
+            font-weight: 800 !important;
+            color: var(--primary-color) !important;
+            margin-bottom: 15px !important;
+            position: relative;
+            display: inline-block;
+        }
+
+        .blog-section .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .blog-section .section-header p {
+            font-size: 1.05rem !important;
+            color: #666666 !important;
+            margin-top: 15px !important;
+        }
+
+        /* Responsive Grid Columns */
+        .blog-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 2.5rem !important;
+            margin: 4rem 0 0 !important;
+        }
+
+        /* Blog Card Redesign */
+        .blog-card {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.04) !important;
+            border-radius: 24px !important;
+            overflow: hidden !important;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.03) !important;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s ease !important;
+            display: flex !important;
+            flex-direction: column !important;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-12px) scale(1.02) !important;
+            border-color: rgba(212, 175, 55, 0.25) !important;
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.1) !important;
+            background: #ffffff !important;
+        }
+
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+            height: 230px !important;
+            width: 100% !important;
+            transform: translateZ(10px);
+        }
+
+        .blog-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            display: block;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.08) !important;
+        }
+
+        /* Floating Read Time tag */
+        .blog-image::before {
+            content: '5 MIN READ';
+            position: absolute;
+            top: 15px; right: 15px;
+            background: rgba(13, 13, 15, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 50px;
+            z-index: 3;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gold top accent border expanding on hover */
+        .blog-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 4px;
+            background: linear-gradient(90deg, var(--gold), #f9e29a, var(--gold));
+            background-size: 200% auto;
+            border-radius: 0 0 24px 24px;
+            transition: width 0.5s ease;
+            z-index: 4;
+        }
+
+        .blog-card:hover::after {
+            width: 100%;
+            animation: shimmerText 2s linear infinite;
+        }
+
+        .blog-content {
+            padding: 1.8rem !important;
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            background: #ffffff !important;
+            transform: translateZ(20px);
+            gap: 0.8rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+            padding-bottom: 0.8rem !important;
+            margin-bottom: 0.4rem !important;
+        }
+
+        .blog-date {
+            color: #8c8c8c !important;
+            font-size: 0.8rem !important;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-date i {
+            color: var(--gold);
+            font-size: 0.85rem;
+        }
+
+        .blog-category {
+            background: rgba(212, 175, 55, 0.08) !important;
+            color: var(--gold) !important;
+            border: 1px solid rgba(212, 175, 55, 0.18) !important;
+            padding: 4px 12px !important;
+            border-radius: 50px !important;
+            font-size: 0.7rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card h3 {
+            color: var(--primary-color) !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            line-height: 1.4 !important;
+            transition: color 0.3s ease !important;
+            text-shadow: none !important;
+            margin: 0 !important;
+        }
+
+        .blog-card:hover h3 {
+            color: var(--gold) !important;
+        }
+
+        .blog-card p {
+            color: #555555 !important;
+            font-size: 0.9rem !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+
+        .read-more {
+            color: var(--gold) !important;
+            font-size: 0.88rem !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center;
+            gap: 4px;
+            margin-top: auto !important;
+            transition: color 0.3s ease;
+            width: fit-content;
+        }
+
+        .read-more::after {
+            display: none !important;
+        }
+
+        .read-more i {
+            font-size: 0.85rem;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .read-more {
+            color: var(--primary-color) !important;
+        }
+
+        .blog-card:hover .read-more i {
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+
+        /* Premium Pagination Upgrade */
+        .pagination {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 12px !important;
+            margin-top: 60px !important;
+        }
+
+        .pagination-btn {
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 50% !important;
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: var(--primary-color) !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            cursor: pointer;
+        }
+
+        .pagination-btn:hover {
+            background: rgba(212, 175, 55, 0.08) !important;
+            color: var(--gold) !important;
+            border-color: rgba(212, 175, 55, 0.3) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.12) !important;
+        }
+
+        .pagination-btn.active {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%) !important;
+            color: #ffffff !important;
+            border-color: transparent !important;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35) !important;
+            transform: scale(1.05) !important;
+        }
+
+        /* Newsletter Section Styling */
+        .newsletter-section {
+            background: linear-gradient(135deg, rgba(13, 13, 15, 0.92) 0%, rgba(20, 20, 25, 0.8) 100%), url('assets/gallery1/office/o3.jpg') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            padding: 100px 0 !important;
+        }
+
+        .newsletter-content {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(212, 175, 55, 0.15) !important;
+            backdrop-filter: blur(15px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            padding: 60px 40px !important;
+            border-radius: 28px !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2.2rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin-bottom: 12px !important;
+        }
+
+        .newsletter-content p {
+            font-size: 1rem !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin-bottom: 30px !important;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 15px 25px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            transition: all 0.4s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .newsletter-form button {
+            border-radius: 50px !important;
+            padding: 15px 35px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+        }
+
+        /* Light Contact CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, #fafaf8 0%, #f7f3eb 100%) !important;
+            color: var(--primary-color) !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.15) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important;
+            padding: 100px 0 !important;
+        }
+
+        .contact-cta::before {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(26, 26, 26, 0.03) 0%, transparent 40%) !important;
+        }
+
+        .contact-cta::after {
+            opacity: 0.15 !important;
+        }
+
+        .contact-cta h2 {
+            text-shadow: none !important;
+            background: linear-gradient(to right, var(--primary-color) 30%, var(--gold) 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            font-weight: 800 !important;
+        }
+
+        .contact-cta p {
+            color: #555555 !important;
+            font-weight: 500 !important;
+        }
+
+        .contact-buttons .btn {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06) !important;
+        }
+
+        .contact-cta .btn-secondary {
+            color: var(--primary-color) !important;
+            border-color: rgba(26, 26, 32, 0.2) !important;
+            background: transparent !important;
+        }
+
+        .contact-cta .btn-secondary:hover {
+            background: var(--primary-color) !important;
+            color: var(--gold) !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 10px 25px rgba(26, 26, 32, 0.15) !important;
+        }
+
+        .contact-cta .btn-secondary i {
+            color: #25D366 !important;
+            margin-right: 6px !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .contact-cta .btn-secondary:hover i {
+            color: #ffffff !important;
+        }
+
+        /* Responsive settings for the blog grid */
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 2rem !important;
+            }
+            .premium-blog-hero h1 {
+                font-size: 3rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 80px 0 !important;
+            }
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+            .newsletter-content {
+                padding: 40px 25px !important;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .newsletter-form button {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            .premium-blog-hero h1 {
+                font-size: 2.3rem !important;
+            }
+            .premium-blog-hero p {
+                font-size: 1rem !important;
+            }
+            .blog-image {
+                height: 200px !important;
+            }
+            .premium-blog-hero .hero-content {
+                padding: 60px 1rem 30px !important;
+            }
+            .blog-card {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .blog-content {
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="nav-logo-img">
+                <span>Krishna Interior House</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu-container">
+                        <div class="dropdown-menu-grid">
+                            <a href="service-detail.html?id=pvc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-square"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Panel & Ceiling</span>
+                                    <span class="item-desc">Moisture-resistant panels</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wpc-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">WPC Panel</span>
+                                    <span class="item-desc">Wood-plastic composite</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=uv-marble" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-gem"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">UV Marble Sheets</span>
+                                    <span class="item-desc">High-gloss marble finish</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=3d-panels" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-cube"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">3D Panels</span>
+                                    <span class="item-desc">Textured wall designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wallpaper" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-image"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wallpapers</span>
+                                    <span class="item-desc">Custom prints & designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wooden-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-tree"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wooden Flooring</span>
+                                    <span class="item-desc">Hardwood & laminate</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=pvc-flooring" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-border-all"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">PVC Flooring</span>
+                                    <span class="item-desc">Waterproof flooring</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=artificial-grass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Artificial Grass</span>
+                                    <span class="item-desc">Low maintenance lawns</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=wall-molding" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-columns"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Wall Molding</span>
+                                    <span class="item-desc">European classic style</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=mosaic-glass" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-shapes"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Mosaic Glass Work</span>
+                                    <span class="item-desc">Artistic glass designs</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=sofit-panel" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-th-large"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Sofit Panel</span>
+                                    <span class="item-desc">Soffit under-ceilings</span>
+                                </div>
+                            </a>
+                            <a href="service-detail.html?id=window-curtains" class="dropdown-item">
+                                <div class="item-icon"><i class="fas fa-window-maximize"></i></div>
+                                <div class="item-content">
+                                    <span class="item-title">Window Curtains</span>
+                                    <span class="item-desc">Custom stitched fabrics</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <a href="services.html" class="all-services-link">View All Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get Free Quote</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Blog Hero -->
+    <section class="page-hero blog-hero premium-blog-hero">
+        <div class="blog-hero-bg">
+            <img src="assets/services/UV Marble Sheets/uv marbel.jpg" alt="Interior Design Blog">
+            <div class="blog-hero-overlay"></div>
+            <div class="animated-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="blog-hero-text-box">
+                <span class="hero-badge" data-aos="fade-up" data-aos-duration="1000">Design Insights</span>
+                <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">The Premium <span class="gold-text">Blog</span></h1>
+                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Stay Ahead of Trends. Master Your Space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Latest Articles</h2>
+                <p>Stay Updated with Interior Design Trends & Tips</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Post 1: PVC vs WPC -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="0" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/gallery1/gallery/g5.jpg" alt="PVC Panel vs WPC Panel in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 20, 2024</span>
+                            <span class="blog-category">Materials Guide</span>
+                        </div>
+                        <h3>PVC Panel vs WPC Panel: Which is Better for Your Lucknow Home?</h3>
+                        <p>Discover the differences between PVC and WPC panels in Lucknow. Compare cost, durability, water resistance, and aesthetic appeal to make the right choice for your walls and ceilings.</p>
+                        <a href="contact.html?service=pvc-panel" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: 3D Wall Panels -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="80" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/gallery1/bedroom/h2.jpg" alt="3D Wall Panels in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 18, 2024</span>
+                            <span class="blog-category">Wall Design</span>
+                        </div>
+                        <h3>How 3D Wall Panels Can Transform Your Living Room in Lucknow</h3>
+                        <p>Learn how to add depth and architectural style to your walls. Our guide on 3D panel Lucknow installations covers the best patterns, materials, and placement tips for accent walls.</p>
+                        <a href="contact.html?service=3d-panels" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3: UV Marble Sheets -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="160" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/services/UV Marble Sheets/uv marbel.jpg" alt="UV Marble Sheets in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 15, 2024</span>
+                            <span class="blog-category">Premium Finishes</span>
+                        </div>
+                        <h3>Why UV Marble Sheets Are the Hottest Premium Finish in Lucknow</h3>
+                        <p>Get a high-end luxury marble look without the premium price. Learn about UV marble sheet properties, installation processes, and why they are perfect for TV units and feature walls.</p>
+                        <a href="contact.html?service=uv-marble" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4: Wallpaper -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="0" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/gallery1/livinroom/l2.jpg" alt="Wallpaper Installation in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 12, 2024</span>
+                            <span class="blog-category">Wall Decor</span>
+                        </div>
+                        <h3>Best Wallpaper & Customized Wallpaper Designs in Lucknow</h3>
+                        <p>Transform your walls with stunning textures and custom photo prints. Explore the latest wallpaper Lucknow trends and professional installation tips for a seamless bubble-free finish.</p>
+                        <a href="contact.html?service=wallpaper" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5: Wooden Flooring -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="80" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/gallery1/livinroom/l6.jpg" alt="Wooden Flooring in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 10, 2024</span>
+                            <span class="blog-category">Flooring Guide</span>
+                        </div>
+                        <h3>The Complete Guide to Wooden Flooring in Lucknow</h3>
+                        <p>Add warmth and elegance to your space. Understand different types of wooden flooring Lucknow options, from laminate to engineered wood, and maintenance tips for Indian climates.</p>
+                        <a href="contact.html?service=wooden-flooring" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6: Artificial Grass -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="160" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/services/Artificial Garden & Grass Design/ag.jpg" alt="Artificial Grass Design in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 08, 2024</span>
+                            <span class="blog-category">Green Decor</span>
+                        </div>
+                        <h3>Innovative Artificial Grass Design for Lucknow Balconies & Terraces</h3>
+                        <p>Create a beautiful vertical garden or lush balcony. Find out how artificial grass design Lucknow solutions provide a maintenance-free green environment year-round.</p>
+                        <a href="contact.html?service=artificial-grass" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7: Best Interior Designer -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="0" data-tilt data-tilt-max="5">
+                    <div class="blog-image">
+                        <img src="assets/gallery1/office/o4.jpg" alt="Best Interior Designer in Lucknow">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="fas fa-calendar"></i> May 05, 2024</span>
+                            <span class="blog-category">Expert Advice</span>
+                        </div>
+                        <h3>How to Choose the Best Interior Designer Near Me in Lucknow</h3>
+                        <p>Looking to renovate your home or office? Here is a step-by-step checklist to find the most reliable interior designer near me Lucknow, ensuring high quality and honest pricing.</p>
+                        <a href="contact.html" class="read-more">Read More & Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" data-aos="fade-up">
+        <div class="container">
+            <div class="newsletter-content" data-aos="zoom-in" data-aos-delay="100">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest interior design tips and trends delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-delay="100">Ready to Transform Your Space?</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Get Your Free Consultation Today</p>
+            <div class="contact-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="https://wa.me/917355004340" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ultra Premium -->
+    <footer class="footer premium-footer">
+        <div class="footer-particles"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <img src="assets/logo/LOGO.jpeg" alt="Krishna Interior House Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Krishna Interior House</span>
+                    </div>
+                    <p class="footer-about-text">We specialize in transforming ordinary spaces into extraordinary luxury experiences with our premium interior design services in Lucknow.</p>
+                    <div class="social-links magnetic-socials">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="animated-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Portfolio Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="animated-links">
+                        <li><a href="service-detail.html?id=pvc-panel">PVC Panels</a></li>
+                        <li><a href="service-detail.html?id=wpc-panel">WPC Panels</a></li>
+                        <li><a href="service-detail.html?id=wooden-flooring">Wooden Flooring</a></li>
+                        <li><a href="service-detail.html?id=wallpaper">Wallpapers</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-map-section">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Vill. Jehta, Near Union Bank, Jehta Mall Road, Lucknow, UP</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+917355004340">+91 73550 04340</a></p>
+                        <p><i class="fas fa-user-tie"></i> <strong>Vijay Kumar Yadav</strong></p>
+                    </div>
+                    <!-- Small Map -->
+                    <div class="footer-map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1130635467027!2d80.816407!3d26.8999337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2345864117%3A0xe5419999a4c0a1e0!2sUnion%20Bank%20Of%20India%20Jehta!5e0!3m2!1sen!2sin!4v1716478900000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Krishna Interior House. Designed with <i class="fas fa-heart" style="color:var(--gold);"></i> in Lucknow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917355004340" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+    </script>
+</body>
+</html>
+
