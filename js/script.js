@@ -12,6 +12,9 @@ const lightboxClose = document.querySelector('.lightbox-close');
 const faqItems = document.querySelectorAll('.faq-item');
 const faqQuestions = document.querySelectorAll('.faq-question');
 
+// ==================== Backend Configuration ====================
+const BACKEND_URL = 'https://interior-uz2r.onrender.com';
+
 // ==================== Hamburger Menu Toggle ====================
 if (hamburger) {
     hamburger.addEventListener('click', () => {
@@ -486,8 +489,8 @@ if (contactForm) {
         }
 
         try {
-            // Use backend server URL explicitly to avoid POST requests hitting the wrong origin.
-            const response = await fetch('http://localhost:5000/api/contact', {
+            // Use deployed backend server URL so this works from any frontend host.
+            const response = await fetch(`${BACKEND_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
