@@ -21,16 +21,21 @@ if (hamburger) {
 }
 
 // ==================== Close Menu on Link Click ====================
-navLinks.forEach(link => {
+const allMenuLinks = document.querySelectorAll('.nav-link, .dropdown-item, .all-services-link');
+allMenuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         // If clicking the dropdown link on mobile, toggle the dropdown instead of closing the menu
-        if (window.innerWidth <= 768 && link.parentElement.classList.contains('dropdown')) {
+        if (window.innerWidth <= 992 && link.classList.contains('nav-link') && link.parentElement.classList.contains('dropdown')) {
             e.preventDefault();
             link.parentElement.classList.toggle('active');
             return;
         }
         if (hamburger) hamburger.classList.remove('active');
         if (navMenu) navMenu.classList.remove('active');
+        
+        // Also close the dropdown itself so it's not open next time
+        const dropdownParent = document.querySelector('.nav-item.dropdown');
+        if (dropdownParent) dropdownParent.classList.remove('active');
     });
 });
 
@@ -442,16 +447,90 @@ faqQuestions.forEach(question => {
 
 // ==================== Contact Form Handling ====================
 const contactForm = document.getElementById('contactForm');
+const contactMessage = document.getElementById('contactMessage');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
         const formData = new FormData(contactForm);
-        
-        // Show success message (in real scenario, send to server)
-        alert('Thank you! We will contact you soon.');
-        contactForm.reset();
+        const payload = {
+            name: formData.get('name')?.trim(),
+            email: formData.get('email')?.trim(),
+            phone: formData.get('phone')?.trim(),
+            city: formData.get('city')?.trim(),
+            service: formData.get('service')?.trim(),
+            message: formData.get('message')?.trim(),
+        };
+
+        if (!payload.name || !payload.email || !payload.phone || !payload.message) {
+            if (contactMessage) {
+                contactMessage.textContent = 'Please fill in all required fields.';
+                contactMessage.style.color = '#d93025';
+            }
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(payload.email)) {
+            if (contactMessage) {
+                contactMessage.textContent = 'Please enter a valid email address.';
+                contactMessage.style.color = '#d93025';
+            }
+            return;
+        }
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+        }
+
+        try {
+            // Use backend server URL explicitly to avoid POST requests hitting the wrong origin.
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            let result;
+            const contentType = response.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+                try {
+                    result = await response.json();
+                } catch (parseError) {
+                    result = {};
+                    console.warn('Failed to parse JSON response:', parseError);
+                }
+            } else {
+                const text = await response.text();
+                result = text ? { error: text } : {};
+            }
+
+            if (!response.ok) {
+                const errorMessage = result.error || result.message || response.statusText || 'Unable to send your inquiry.';
+                throw new Error(errorMessage);
+            }
+
+            if (contactMessage) {
+                contactMessage.textContent = result.message || 'Your message has been sent successfully.';
+                contactMessage.style.color = '#0f5132';
+            }
+            contactForm.reset();
+        } catch (error) {
+            if (contactMessage) {
+                contactMessage.textContent = error.message || 'Server error. Please try again later.';
+                contactMessage.style.color = '#d93025';
+            }
+            console.error('Contact form submission failed:', error);
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        }
     });
 }
 
