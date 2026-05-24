@@ -10,6 +10,9 @@ const sendContactEmail = async ({ name, email, phone, message, city, service }) 
       user: process.env.SMTP_EMAIL,
       pass: process.env.SMTP_PASSWORD,
     },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 10000,
   });
 
   const serviceText = service ? `Service: ${service}\n` : '';
@@ -57,21 +60,22 @@ exports.submitContact = async (req, res) => {
   }
 
   try {
-    const contact = new Contact({ name, email, phone, message });
+    const contact = new Contact({ name, email, phone, message, city, service });
     const savedContact = await contact.save();
 
-    const emailResult = await sendContactEmail({ name, email, phone, message, city, service });
-
-    return res.status(201).json({
+    res.status(201).json({
       success: true,
-      message: 'Inquiry saved successfully and email notification sent.',
+      message: 'Inquiry saved successfully. We will contact you shortly.',
       data: savedContact,
-      email: {
-        accepted: emailResult.accepted,
-        rejected: emailResult.rejected,
-        messageId: emailResult.messageId,
-      },
     });
+
+    sendContactEmail({ name, email, phone, message, city, service })
+      .then(result => console.log('Contact email sent:', {
+        accepted: result.accepted,
+        rejected: result.rejected,
+        messageId: result.messageId,
+      }))
+      .catch(error => console.error('Contact email failed after save:', error));
   } catch (error) {
     console.error('Contact submit error:', error);
 
